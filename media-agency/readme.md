@@ -132,6 +132,7 @@ KANSAS CITY                                 2298.40          2       1149.20
 ```
 
 > What market has the lowest cost per spot?
+
 ```sql
   1  select market, count(*) as spots,sum(cost) as amount, sum(cost)/count(*) as cost_per from emm_stations t,emm_spots s
   2  where t.station = s.station group by market
@@ -143,6 +144,7 @@ HOUSTON                                           1     111.54     111.54
 ```
 
 > What station generated the most calls?
+
 ```sql 
 SQL> select station,count(*) as calls from emm_stationnumbers n, emm_calls c
   2  where n.phone = c.phone
