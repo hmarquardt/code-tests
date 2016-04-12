@@ -80,13 +80,14 @@ UNKNOWN                                  HALO 8006810950               0        
 
 Addressed in opening narrative.
 
-> Any calls that occurred on phone numbers not associated with our media spend should have a market of “UNKNOWN” and a station of “HALO.”
-A successful call is only a call with a result of ‘lead’ or ‘sale'
+> Any calls that occurred on phone numbers not associated with our media spend should have a market of 'UNKNOWN' and a station of 'HALO.'
+A successful call is only a call with a result of 'lead' or 'sale'
  
 Accomodated in view logic
 
 > Answer the following about the data:
 > How many successful phone calls were made?
+
 ```sql
 select count(*) from emm_calls where result in ('sale','lead')
 
@@ -96,6 +97,7 @@ select count(*) from emm_calls where result in ('sale','lead')
 ```
 
 > What was the total amount spent on the advertisements?
+
 ```sql
 select sum(cost) from emm_spots;
 
