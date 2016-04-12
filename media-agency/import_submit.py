@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 '''
-Empower Media Marketing skills assesement import job
 
 Hank Marquuardt 5/8/2015
 
